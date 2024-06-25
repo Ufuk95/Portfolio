@@ -12,9 +12,12 @@
     height: auto;
     width: 100%;
 
+
     .name {
         font-weight: 700;
         font-size: 90px;
+        position: relative;
+        top: 40px;
     }
 
     .job {
@@ -22,12 +25,33 @@
         font-weight: 400;
         font-size: 58px;
     }
+
+    button {
+        background-color: rgba(250, 121, 2, 1);
+        width: 164px;
+        height: 58px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 23px;
+        color: white;
+        transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+
+        &:hover {
+            background-color: rgba(255, 71, 71, 1);
+            transform: scale(1.1) translateY(3px);
+            cursor: pointer;
+        }
+    }
+
+
 }
 
 .rightSide {
     @include dFlex($ai: center);
     box-sizing: border-box;
     padding-right: 48px;
+    width: 100%;
 }
 
 .iAm {
@@ -39,5 +63,17 @@
         width: 152px;
         font-weight: 400;
         font-size: 64px;
+        position: relative;
+        top: 24px;
     }
+}
+
+
+.leftSide {
+    width: 90%;
+}
+
+.backgroundImage {
+    margin-top: 100px;
+    width: 100%
 }
