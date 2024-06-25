@@ -2,8 +2,11 @@
 
 .header {
     width: 100vw;
-    height: 110px;
-    @include dFlex($jc: space-around, $ai: center)
+    @include dFlex($jc: space-between, $ai: center);
+    height: 75px;
+    box-sizing: border-box;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 .headerName {
@@ -26,7 +29,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-            color: orangered;
+            color: rgba(255, 71, 71, 1);
         }
     }
 }
