@@ -1,1 +1,24 @@
-<p>my-skills works!</p>
+<div class="mySkills">
+    <div class="skillLogos">
+        <img src="img/skills/orangeDust.png" alt="">
+        <div *ngFor="let skill of skillImages" class="skill-container">
+            <img [src]="skill.src" alt="web skill logos">
+            <span>{{ skill.name }}</span>
+        </div>
+    </div>
+
+    <div class="skillText">
+        <div>
+            <h1>
+                My skills
+            </h1>
+            <img src="img/skills/redSkillLine.png" alt="">
+        </div>
+        <span>
+            I have grown my frontend developments skills that have allowed me to create different real projects.
+        </span>
+        <button>
+            Get in touch
+        </button>
+    </div>
+</div>
