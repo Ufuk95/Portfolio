@@ -1,0 +1,32 @@
+@import '../app.component.scss';
+
+.portfolio {
+    @include dFlex($jc:center, $ai:center, $g: 0px); // übergangslösung: muss verändert werden
+    position: relative;
+    top: 100px;
+}
+
+.headline {
+    @include dFlex($jc:center, $ai:center, $g: 0px);
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    div {
+        @include dFlex($jc:center, $ai:center, $g: 50px);
+        position: absolute;
+        right: 0;
+
+
+        h1 {
+            font-weight: 700;
+            font-size: 90px;
+        }
+    }
+
+    span {
+        position: relative;
+        top: 100px;
+    }
+}
+

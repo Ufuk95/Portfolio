@@ -20,6 +20,6 @@ export class MySkillsComponent {
     { src: 'img/skills/css.png', name: 'CSS' },
     { src: 'img/skills/api.png', name: 'Rest-Api' },
     { src: 'img/skills/scrum.png', name: 'Scrum' },
-    { src: 'img/skills/material.png', name: 'Material Design' }
+    { src: 'img/skills/material.png', name: 'Material design' }
   ];
 }

@@ -33,10 +33,11 @@
             align-items: center;
             justify-content: center;
             width: 70px;
+            font-weight: 700;
+            font-size: 16px;
         }
-      }
+    }
 }
-
 
 .skillText {
     @include dFlex($jc: center, $ai: center);

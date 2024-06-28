@@ -1,9 +1,9 @@
 <div class="mySkills">
     <div class="skillLogos">
         <img src="img/skills/orangeDust.png" alt="">
-        <div *ngFor="let skill of skillImages" class="skill-container">
-            <img [src]="skill.src" alt="web skill logos">
-            <span>{{ skill.name }}</span>
+        <div *ngFor="let image of skillImages" class="skill-container">
+            <img [src]="image.src" alt="web skill logos">
+            <span>{{ image.name }}</span>
         </div>
     </div>
 
