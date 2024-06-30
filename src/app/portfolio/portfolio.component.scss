@@ -1,19 +1,20 @@
 @import '../app.component.scss';
 
 .portfolio {
-    @include dFlex($jc:center, $ai:center, $g: 0px); // übergangslösung: muss verändert werden
+    @include dFlex($jc: center, $ai: center, $g: 0px); // übergangslösung: muss verändert werden
+    flex-direction: column;
     position: relative;
     top: 100px;
 }
 
 .headline {
-    @include dFlex($jc:center, $ai:center, $g: 0px);
+    @include dFlex($jc: center, $ai: center, $g: 0px);
     flex-direction: column;
     width: 100%;
     position: relative;
 
     div {
-        @include dFlex($jc:center, $ai:center, $g: 50px);
+        @include dFlex($jc: center, $ai: center, $g: 50px);
         position: absolute;
         right: 0;
 
@@ -30,3 +31,91 @@
     }
 }
 
+.project-container {
+    margin-top: 200px;
+}
+
+.project {
+    @include dFlex($jc: center, $ai: center);
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+
+    div {
+        max-width: 513px;
+
+        span {
+            font-weight: 700;
+            font-size: 32px;
+            color: rgba(255, 71, 71, 1);
+        }
+
+        div {
+            @include dFlex($jc: flex-start, $ai: center, $g: 86px);
+
+            button {
+                width: 152px;
+                height: 58px;
+                border-radius: 10px;
+                padding: 15px, 30px, 15px, 30px;
+                font-weight: 400;
+                font-size: 23px;
+                color: white;
+            }
+        }
+    }
+}
+
+.firstButton {
+    background-color: rgba(255, 71, 71, 1);
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(250, 121, 2, 1);
+    }
+}
+
+.secondButton {
+    background-color: transparent;
+    border: 1px solid rgba(250, 121, 2, 1);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(250, 121, 2, 1);
+    }
+}
+
+.projectImage {}
+
+
+.projectEnvironment {
+    font-weight: 400;
+    font-size: 23px;
+    color: rgba(250, 121, 2, 1);
+}
+
+.projectText {
+    font-weight: 400;
+    
+}
+
+.redBackground {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.orangeBackground {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.end {
+    @include dFlex($jc: center, $ai: end);
+    flex-direction: column;
+    text-align: end;
+}
