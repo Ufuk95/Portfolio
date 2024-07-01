@@ -1,0 +1,126 @@
+@import '../app.component.scss';
+
+.fullContactArea {
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+
+.contactHeadline {
+    @include dFlex($jc: flex-start, $ai: center, $g: 50px);
+
+    h1 {
+        font-weight: 700;
+        font-size: 90px;
+    }
+}
+
+.contactDetails {
+    @include dFlex($jc: space-between, $ai: baseline, $g: 150px);
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+
+.contactText {
+    @include dFlex($jc: center, $ai: flex-start);
+    flex-direction: column;
+
+    span {
+        font-weight: 400;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        margin-top: 1000px;
+        z-index: -1;
+    }
+}
+
+.contactInput {
+    @include dFlex($jc: center, $ai: center, $g: 32px);
+    flex-direction: column;
+
+    input,
+    textarea {
+        width: 617px;
+        height: 50px;
+        background-color: transparent;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 71, 71, 1);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 400;
+
+        &:hover {
+            border-color: rgb(250, 121, 2);
+        }
+    }
+
+    textarea {
+        max-width: 617px;
+        height: 202px;
+    }
+
+    button {
+        max-width: 253px;
+        height: 58px;
+        border-radius: 10px;
+        padding: 15px 30px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 23px;
+        background-color: rgba(182, 182, 182, 1);
+        color: white;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.arrowUp {
+    @include dFlex($jc: flex-end, $ai: center);
+    width: 100%;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+
+.checkBoxArea {
+    @include dFlex($jc: center, $ai: flex-start, $g: 10px);
+
+    img {
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(24, 55, 113, 1);
+            border-radius: 38px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    a {
+        padding-left: 3px;
+        padding-right: 3px;
+        box-sizing: border-box;
+        color: rgba(255, 71, 71, 1);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
