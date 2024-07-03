@@ -13,22 +13,32 @@
             <img src="img/contact/redMistContact.png" alt="">
         </div>
         <div class="contactInput">
-            <!-- <form action="">
-                
-            </form> -->
-            <input placeholder="Your Name" type="text">
-            <input placeholder="Your email" type="email">
-            <textarea placeholder="Your message" rows="15" id=""></textarea>
-            <div class="checkBoxArea">
-                <img src="img/contact/orangeCheckbox.png" alt="">
-                <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
-                    outlined.</span>
-            </div>
-            <button>{{ buttonText }}</button>
+
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+                <input [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required>
+
+                <input [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+                <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" id="" required></textarea>
+                @if (!message.valid && message.touched) {
+                    <span>Please enter a message</span>
+                }
+
+                <div class="checkBoxArea">
+                    <img src="img/contact/orangeCheckbox.png" alt="">
+                    <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                </div>
+
+                <button type="submit" value="submit">{{ buttonText }}</button>
+
+            </form>
+            
+
             <div class="arrowUpPosition">
                 <div class="arrowUp">
-                </div>  
-            </div>      
+                </div>
+            </div>
         </div>
     </div>
 
