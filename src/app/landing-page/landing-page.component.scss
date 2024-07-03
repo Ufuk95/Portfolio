@@ -71,12 +71,20 @@
 
 .leftSide {
     width: 90%;
+    position: relative;
 }
 
 .backgroundImage {
-    margin-top: 100px;
+    margin-top: 150px;
     width: 100%
 }
+
+// .selfie {
+//     position: absolute;
+//     left: 140px;
+//     top: 90px;
+// }
+
 
 .dataImage {
     background-size: cover;
@@ -98,6 +106,17 @@
 
 .socialMediaLogo {
     @include dFlex($jc: center, $ai: center, $g: 30px);
+}
+
+.socialLogo {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: 0 5px; 
+
+    &:hover {
+        transform: scale(1.33);
+        cursor: pointer;
+    }
 }
 
 .scrollDown {

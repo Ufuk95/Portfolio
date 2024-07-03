@@ -1,7 +1,7 @@
 @import '../app.component.scss';
 
 .fullContactArea {
-    margin-top: 250px;
+    margin-top: 150px;
     margin-bottom: 100px;
 }
 
@@ -47,7 +47,7 @@
     @include dFlex($jc: center, $ai: center, $g: 32px);
     flex-direction: column;
 
-    input,
+    input[type=text],[type=email],
     textarea {
         width: 617px;
         height: 50px;
@@ -87,12 +87,28 @@
     }
 }
 
-.arrowUp {
+.arrowUpPosition {
     @include dFlex($jc: flex-end, $ai: center);
     width: 100%;
-    margin-top: 70px;
-    box-sizing: border-box;
+
+    .arrowUp {
+        background-image: url('/img/contact/whiteArrowUp.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 39px;
+        height: 39px;
+        margin-top: 70px;
+        box-sizing: border-box;
+        position: relative; 
+    
+        &:hover {
+            background-image: url('/img/contact/orangeArrowUp.png');
+            cursor: pointer;
+        }
+    }
 }
+
+
 
 .checkBoxArea {
     @include dFlex($jc: center, $ai: flex-start, $g: 10px);

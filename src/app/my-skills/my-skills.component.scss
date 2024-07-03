@@ -36,6 +36,13 @@
             font-weight: 700;
             font-size: 16px;
         }
+
+        img {
+            transition: transform 0.2s ease-in-out;
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
     }
 }
 
