@@ -15,6 +15,7 @@
         <div class="contactInput">
 
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+              
                 <div class="inputContainer">
                   <div>
                     <input #name="ngModel" [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required

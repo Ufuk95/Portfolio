@@ -31,7 +31,7 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'https://ufuk-oezsahin.de/sendMail.php',
+    endPoint: 'http://ufuk-oezsahin.de/sendMail.php', // wenn die eigene seite kurz davor ist fertig zu sein von http auf https ändern und die sendMail.php mit in fileZilla hochladen
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -41,28 +41,31 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+ onSubmit(ngForm: NgForm) {
     this.checkboxTouched = true;  // Mark checkbox as touched
 
-    if (ngForm.form.valid && this.isChecked) {
-      if (!this.mailTest) {
-        this.http.post(this.post.endPoint, this.post.body(this.contactData))
-          .subscribe({
-            next: (response) => {
-              ngForm.resetForm();
-              this.isChecked = false;
-              this.checkboxTouched = false;
-            },
-            error: (error) => {
-              console.error(error);
-            },
-            complete: () => console.info('send post complete'),
-          });
-      } else {
-        ngForm.resetForm();
-        this.isChecked = false;
-        this.checkboxTouched = false;
-      }
+    console.log('Form submitted');
+    debugger;
+
+    if (ngForm.form.valid && this.isChecked && this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .subscribe({
+          next: (response) => {
+            console.log('Response:', response);
+            ngForm.resetForm();
+            this.isChecked = false;
+            this.checkboxTouched = false;
+          },
+          error: (error) => {
+            console.error('Error:', error);
+          },
+          complete: () => console.info('Send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      ngForm.resetForm();
+      this.isChecked = false;
+      this.checkboxTouched = false;
     }
   }
 }
+
