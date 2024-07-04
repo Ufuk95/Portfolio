@@ -43,38 +43,69 @@
     }
 }
 
+.d-none {
+    display: none;
+}
+
 .inputContainer {
     position: relative;
-    @include dFlex($jc: flex-end, $ai: center);
-    
-    img {
-        padding-right: 12px;
-        position: absolute;
-        box-sizing: border-box;
+    @include dFlex($jc: flex-start, $ai: baseline);
+    flex-direction: column;
+
+    div {
+        @include dFlex($jc: flex-end, $ai: center);
+
+        img {
+            padding-right: 12px;
+            position: absolute;
+            box-sizing: border-box;
+        }
+    }
+
+    .warnMessage {
+        color: darkred;
+        margin-top: 5px;
+        font-size: 0.875rem;
     }
 }
 
 .textContainer {
     position: relative;
-    @include dFlex($jc: flex-end, $ai: flex-start);
-    img {
-        position: absolute;
-        padding: 12px;
-        box-sizing: border-box;
+    flex-direction: column;
+    @include dFlex($jc: flex-start, $ai: flex-start);
 
+    div {
+        @include dFlex($jc: flex-end, $ai: flex-start);
+
+        img {
+            padding-right: 12px;
+            padding-top: 12px;
+            position: absolute;
+            box-sizing: border-box;
+        }
+    }
+
+    .warnMessage {
+        color: darkred;
+        margin-top: 5px;
+        font-size: 0.875rem;
     }
 }
 
 .contactInput {
-    @include dFlex($jc: center, $ai: center, $g: 32px);
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
     position: relative;
 
-
     form {
-        @include dFlex($jc: center, $ai: center, $g: 32px);
+        display: flex;
         flex-direction: column;
-
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
 
         input[type=text],
         [type=email],
@@ -88,9 +119,18 @@
             padding: 10px;
             box-sizing: border-box;
             font-weight: 400;
+            transition: border-color 0.3s;
 
             &:hover {
                 border-color: rgb(250, 121, 2);
+            }
+
+            &.invalid {
+                border: 1px solid darkred;
+            }
+
+            &.valid {
+                border: 1px solid lightgreen;
             }
         }
 
@@ -114,65 +154,79 @@
             &:hover {
                 cursor: pointer;
             }
+
+            &.valid {
+                background-color: orange;
+                transition: all 0.3s;
+
+                &:hover {
+                    transform: scale(1.1, 1.1) scaleY(1.1);
+                }
+            }
         }
     }
 }
+    .arrowUpPosition {
+        @include dFlex($jc: flex-end, $ai: center);
+        width: 100%;
 
-.arrowUpPosition {
-    @include dFlex($jc: flex-end, $ai: center);
-    width: 100%;
+        .arrowUp {
+            background-image: url('/img/contact/whiteArrowUp.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 39px;
+            height: 39px;
+            margin-top: 70px;
+            box-sizing: border-box;
+            position: relative;
 
-    .arrowUp {
-        background-image: url('/img/contact/whiteArrowUp.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 39px;
-        height: 39px;
-        margin-top: 70px;
-        box-sizing: border-box;
+            &:hover {
+                background-image: url('/img/contact/orangeArrowUp.png');
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    .checkBoxArea {
+        @include dFlex($jc: center, $ai: flex-start, $g: 10px);
+        flex-direction: column;
         position: relative;
 
-        &:hover {
-            background-image: url('/img/contact/orangeArrowUp.png');
-            cursor: pointer;
+        div {
+            @include dFlex($jc: center, $ai: flex-start, $g: 6px);
+        }
+
+        img {
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(24, 55, 113, 1);
+                border-radius: 38px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        a {
+            padding-left: 3px;
+            padding-right: 3px;
+            box-sizing: border-box;
+            color: rgba(255, 71, 71, 1);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .warnMessage {
+            color: darkred;
+            font-size: 0.875rem;
         }
     }
-}
-
-
-
-.checkBoxArea {
-    @include dFlex($jc: center, $ai: flex-start, $g: 10px);
-
-    img {
-        &:hover {
-            cursor: pointer;
-            background-color: rgba(24, 55, 113, 1);
-            border-radius: 38px;
-            width: 24px;
-            height: 24px;
-        }
-    }
-
-    span {
-        font-weight: 400;
-        font-size: 14px;
-    }
-
-    a {
-        padding-left: 3px;
-        padding-right: 3px;
-        box-sizing: border-box;
-        color: rgba(255, 71, 71, 1);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-
-.d-none {
-    display: none;
-}

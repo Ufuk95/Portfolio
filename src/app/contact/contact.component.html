@@ -15,46 +15,61 @@
         <div class="contactInput">
 
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-
                 <div class="inputContainer">
-                    <input #name="ngModel" [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required>
-                    <img class="d-none" src="img/contact/correct.png" alt="">
-                    <img class="d-none" src="img/contact/error.png" alt="">
+                  <div>
+                    <input #name="ngModel" [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required
+                      [ngClass]="{'invalid': !name.valid && name.touched, 'valid': name.valid && name.touched}">
+                    <img [class.d-none]="!name.touched || name.valid" src="img/contact/error.png" alt="Error">
+                    <img [class.d-none]="!name.touched || !name.valid" src="img/contact/correct.png" alt="Correct">
+                  </div>
+                  <div class="warnMessage">
+                    <span *ngIf="!name.valid && name.touched">Please enter a valid name</span>
+                  </div>
                 </div>
-                @if (!name.valid && name.touched) {
-                    <span>Please enter a email</span>
-                }
                 
-
                 <div class="inputContainer">
-                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    <img class="d-none" src="img/contact/correct.png" alt="">
-                    <img class="d-none" src="img/contact/error.png" alt="">
+                  <div>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                      [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
+                    <img [class.d-none]="!email.touched || email.valid" src="img/contact/error.png" alt="Error">
+                    <img [class.d-none]="!email.touched || !email.valid" src="img/contact/correct.png" alt="Correct">
+                  </div>
+                  <div class="warnMessage">
+                    <span *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+                  </div>
                 </div>
-                @if (!email.valid && email.touched) {
-                    <span>Please enter a email</span>
-                }
                 
-
                 <div class="textContainer">
-                    <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" id="" required></textarea>
-                    <img class="d-none" src="img/contact/correct.png" alt="">
-                    <img class="d-none" src="img/contact/error.png" alt="">
+                  <div>
+                    <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" required 
+                      [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
+                    <img [class.d-none]="!message.touched || message.valid" src="img/contact/error.png" alt="Error">
+                    <img [class.d-none]="!message.touched || !message.valid" src="img/contact/correct.png" alt="Correct">
+                  </div>
+                  <div class="warnMessage">
+                    <span *ngIf="!message.valid && message.touched">Please enter a valid message</span>
+                  </div>
                 </div>
-                @if (!message.valid && message.touched) {
-                    <span>Please enter a message</span>
-                }
                 
-
                 <div class="checkBoxArea">
-                    <img src="img/contact/orangeCheckbox.png" alt="">
+                  <div>
+                    <img src="img/contact/orangeCheckbox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': isChecked}">
+                    <img class="d-none" src="img/contact/orangeCheckedBox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': !isChecked}">
                     <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                  </div>
+                  <div class="warnMessage">
+                    <span *ngIf="!isChecked && checkboxTouched">Please agree to the privacy policy</span>
+                  </div>
                 </div>
-
-                <button type="submit" value="submit">{{ buttonText }}</button>
-
-            </form>
+                
+                <button type="submit" [ngClass]="{'valid': contactForm.form.valid && isChecked}" value="submit">{{ buttonText }}</button>
+              </form>
+              
             
+
+
+
 
             <div class="arrowUpPosition">
                 <div class="arrowUp">

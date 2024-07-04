@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -13,15 +12,22 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
-  buttonText :string = 'Send message :)';
+  buttonText: string = 'Send message :)';
   mailTest = true;
   http = inject(HttpClient);
-
 
   contactData = {
     name: '',
     email: '',
     message: '',
+  }
+
+  isChecked = false;
+  checkboxTouched = false;
+
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
+    this.checkboxTouched = true;
   }
 
   post = {
@@ -36,21 +42,27 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+    this.checkboxTouched = true;  // Mark checkbox as touched
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
+    if (ngForm.form.valid && this.isChecked) {
+      if (!this.mailTest) {
+        this.http.post(this.post.endPoint, this.post.body(this.contactData))
+          .subscribe({
+            next: (response) => {
+              ngForm.resetForm();
+              this.isChecked = false;
+              this.checkboxTouched = false;
+            },
+            error: (error) => {
+              console.error(error);
+            },
+            complete: () => console.info('send post complete'),
+          });
+      } else {
+        ngForm.resetForm();
+        this.isChecked = false;
+        this.checkboxTouched = false;
+      }
     }
   }
 }
