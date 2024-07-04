@@ -43,13 +43,39 @@
     }
 }
 
+.inputContainer {
+    position: relative;
+    @include dFlex($jc: flex-end, $ai: center);
+    
+    img {
+        padding-right: 12px;
+        position: absolute;
+        box-sizing: border-box;
+    }
+}
+
+.textContainer {
+    position: relative;
+    @include dFlex($jc: flex-end, $ai: flex-start);
+    img {
+        position: absolute;
+        padding: 12px;
+        box-sizing: border-box;
+
+    }
+}
+
 .contactInput {
     @include dFlex($jc: center, $ai: center, $g: 32px);
     flex-direction: column;
+    position: relative;
+
 
     form {
         @include dFlex($jc: center, $ai: center, $g: 32px);
         flex-direction: column;
+
+
         input[type=text],
         [type=email],
         textarea {
@@ -144,4 +170,9 @@
             text-decoration: underline;
         }
     }
+}
+
+
+.d-none {
+    display: none;
 }

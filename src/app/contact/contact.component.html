@@ -16,14 +16,35 @@
 
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-                <input [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required>
+                <div class="inputContainer">
+                    <input #name="ngModel" [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required>
+                    <img class="d-none" src="img/contact/correct.png" alt="">
+                    <img class="d-none" src="img/contact/error.png" alt="">
+                </div>
+                @if (!name.valid && name.touched) {
+                    <span>Please enter a email</span>
+                }
+                
 
-                <input [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <div class="inputContainer">
+                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <img class="d-none" src="img/contact/correct.png" alt="">
+                    <img class="d-none" src="img/contact/error.png" alt="">
+                </div>
+                @if (!email.valid && email.touched) {
+                    <span>Please enter a email</span>
+                }
+                
 
-                <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" id="" required></textarea>
+                <div class="textContainer">
+                    <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" id="" required></textarea>
+                    <img class="d-none" src="img/contact/correct.png" alt="">
+                    <img class="d-none" src="img/contact/error.png" alt="">
+                </div>
                 @if (!message.valid && message.touched) {
                     <span>Please enter a message</span>
                 }
+                
 
                 <div class="checkBoxArea">
                     <img src="img/contact/orangeCheckbox.png" alt="">
