@@ -115,7 +115,7 @@
             background-color: transparent;
             color: white;
             border-radius: 10px;
-            border: 1px solid rgba(255, 71, 71, 1);
+            border: 2px solid rgba(255, 71, 71, 1);
             padding: 10px;
             box-sizing: border-box;
             font-weight: 400;
@@ -126,11 +126,11 @@
             }
 
             &.invalid {
-                border: 1px solid darkred;
+                border: 2px solid darkred;
             }
 
             &.valid {
-                border: 1px solid lightgreen;
+                border: 2px solid lightgreen;
             }
         }
 
