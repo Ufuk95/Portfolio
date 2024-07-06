@@ -15,7 +15,7 @@
     box-sizing: border-box;
     width: 100%;
 
-    >img {
+    > img {
         position: absolute;
         left: 0;
         z-index: -1;
@@ -28,7 +28,7 @@
         flex-direction: column;
         margin: 10px;
 
-        >span {
+        > span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -39,6 +39,7 @@
 
         img {
             transition: transform 0.2s ease-in-out;
+
             &:hover {
                 transform: translateY(-8px);
             }
@@ -52,7 +53,7 @@
     position: relative;
     bottom: 100px;
 
-    >div {
+    > div {
         @include dFlex($jc: end, $ai: center, $g: 30px);
         width: 100%;
 
@@ -64,7 +65,7 @@
         }
     }
 
-    >span {
+    > span {
         font-weight: 400;
         font-size: 16px;
     }
@@ -87,6 +88,59 @@
             cursor: pointer;
         }
     }
+}
 
+.d-none {
+    display: none;
+}
 
+.responsiveButton {
+    background-color: rgba(250, 121, 2, 1);
+    width: 164px;
+    height: 58px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 23px;
+    color: white;
+    transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+    margin-top: 30px;
+
+    &:hover {
+        background-color: rgba(255, 71, 71, 1);
+        transform: scale(1.1) translateY(3px);
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 431px) {
+    .mySkills {
+        bottom: 420px;
+        flex-direction: column-reverse;
+    }
+
+    .skillText > div h1 {
+        font-size: 44px;
+    }
+
+    .skillText > span {
+        padding-left: 8px;
+        box-sizing: border-box;
+    }
+    .skillText button {
+        display: none;
+    }
+
+    .skillLogos {
+        justify-content: center;
+        gap: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .d-none {
+        display: block;
+        position: absolute;
+        bottom: -80px;
+    }
 }

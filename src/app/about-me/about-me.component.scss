@@ -62,3 +62,19 @@
     border-radius: 50%;
 }
 
+@media (min-width: 320px) and (max-width: 431px) {
+    .aboutMe {
+        bottom: 600px;
+    }
+
+    .aboutMeInfo[_ngcontent-ng-c1972628863] > h1[_ngcontent-ng-c1972628863] {
+        font-size: 44px;
+    }
+    .circleSelfie[_ngcontent-ng-c1972628863] {
+        display: none;
+    }
+    .aboutMeInfo[_ngcontent-ng-c1972628863] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
