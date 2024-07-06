@@ -42,10 +42,9 @@ export class ContactComponent {
   };
 
  onSubmit(ngForm: NgForm) {
-    this.checkboxTouched = true;  // Mark checkbox as touched
+    this.checkboxTouched = true;
 
     console.log('Form submitted');
-    debugger;
 
     if (ngForm.form.valid && this.isChecked && this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
