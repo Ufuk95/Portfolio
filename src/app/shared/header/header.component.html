@@ -8,4 +8,12 @@
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
     </div>
+
+    <img class="burger-icon d-none" src="/img/burger.png" alt="" (click)="toggleMenu()">
+
+    <div class="dropdown-menu" *ngIf="menuOpen">
+        <a href="#aboutMe" (click)="closeMenu()">About me</a>
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+        <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+    </div>
 </div>
