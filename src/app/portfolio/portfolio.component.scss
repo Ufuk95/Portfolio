@@ -180,6 +180,7 @@
     .project div div {
         gap: 16px;
         justify-content: center;
+        width: 100%;
     }
 
     .orangeBackground {
@@ -195,11 +196,26 @@
     .project div span {
         width: 100%;
     }
+
     .projectEnvironment {
         width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
     }
 
     .project-container {
         margin-top: 0;
+    }
+
+    .project div div button {
+        width: 130px;
+        height: 50px;
+    }
+
+    .projectText {
+        padding-left: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
     }
 }
