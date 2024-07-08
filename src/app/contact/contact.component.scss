@@ -282,3 +282,9 @@
         width: 100%;
     }
 }
+
+@media (min-width: 432px) and (max-width: 1150) {
+    .contactText img {
+        margin-top: 900px;
+    }
+}

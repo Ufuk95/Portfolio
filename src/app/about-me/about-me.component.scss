@@ -67,14 +67,30 @@
         bottom: 500px;
     }
 
-    .aboutMeInfo[_ngcontent-ng-c1972628863] > h1[_ngcontent-ng-c1972628863] {
+    .aboutMeInfo >h1 {
         font-size: 44px;
     }
-    .circleSelfie[_ngcontent-ng-c1972628863] {
+
+    .circleSelfie {
         display: none;
     }
-    .aboutMeInfo[_ngcontent-ng-c1972628863] {
+
+    .aboutMeInfo {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media (min-width: 432px) and (max-width: 1300px) {
+    .orangeLine {
+        display: none;
+    }
+
+    .ellipseFoto {
+        padding-right: 12px;
+        box-sizing: border-box;
+    }
+    .aboutMeInfo{
+        padding-left: 40px;
     }
 }
