@@ -1,4 +1,4 @@
-@import '../app.component.scss';
+@import '../../app.component.scss';
 
 .portfolio {
     @include dFlex($jc: center, $ai: center, $g: 0px); // übergangslösung: muss verändert werden

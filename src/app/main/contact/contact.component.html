@@ -57,7 +57,7 @@
                   <div>
                     <img src="/img/contact/orangeCheckbox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': isChecked}">
                     <img class="d-none" src="/img/contact/orangeCheckedBox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': !isChecked}">
-                    <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <span>I've read the <a href="privacy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</span>
                   </div>
                   <div class="warnMessage">
                     <span *ngIf="!isChecked && checkboxTouched">Please agree to the privacy policy</span>
