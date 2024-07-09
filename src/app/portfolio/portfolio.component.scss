@@ -38,8 +38,8 @@
 .project {
     @include dFlex($jc: center, $ai: center, $g: 100px);
     width: 100%;
-    padding-left: 150px;
-    padding-right: 80px;
+    // padding-left: 150px;
+    // padding-right: 80px;
     box-sizing: border-box;
 
     div {
@@ -117,7 +117,7 @@
 }
 
 
-@media (min-width: 320px) and (max-width: 431px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .portfolio {
         top: -150px;
     }
@@ -149,14 +149,12 @@
     .project {
         flex-direction: column;
         gap: 10px;
-        padding-left: 8px;
-        padding-right: 8px;
         padding-top: 80px;
         box-sizing: border-box;
         text-align: center;
 
         img {
-            max-width: 350px;
+            width: 320px;
         }
     }
 
@@ -220,9 +218,78 @@
     }
 }
 
-@media (min-width: 432px) and (max-width: 1300px) {
+@media (min-width: 501px) and (max-width: 1100px) {
+    .secondLine {
+        width: calc(100px + (350 * ((100vw - 501px) / (1000 - 501))));
+        height: 3px;
+    }
+
+    .firstLine {
+        width: calc(50px + (63 * ((100vw - 501px) / (1000 - 501))));
+        height: 3px;
+    }
+
+    .headline div h1 {
+        font-size: calc(64px + (26 * ((100vw - 501px) / (1000 - 501))));
+    }
+
+    .headline div h1 {
+        font-size: 64px;
+    }
+
+    .headline div {
+        gap: 35px;
+    }
+    .headline span {
+        padding-left: 5px;
+        padding-right: 5px;
+        box-sizing: border-box;
+    }
+
+
     .project {
-        padding-left: 0;
-        padding-right: 0;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 80px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+        padding-top: 80px;
+        box-sizing: border-box;
+        gap: 0px;
+    }
+
+    .project div {
+        max-width: 400px;
+        gap: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .project div div {
+        gap: 16px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .project div span {
+        width: 100%;
+    }
+    .projectEnvironment {
+        width: 100%;
+    }
+
+    .project img {
+        max-width: 500px;
     }
 }
+
+
+

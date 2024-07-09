@@ -62,7 +62,7 @@
     border-radius: 50%;
 }
 
-@media (min-width: 320px) and (max-width: 431px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .aboutMe {
         bottom: 500px;
     }
@@ -81,7 +81,7 @@
     }
 }
 
-@media (min-width: 432px) and (max-width: 1300px) {
+@media (min-width: 501px) and (max-width: 1300px) {
     .orangeLine {
         display: none;
     }
@@ -92,5 +92,11 @@
     }
     .aboutMeInfo{
         padding-left: 40px;
+    }
+}
+
+@media (max-width: 885px) {
+    .ellipseFoto {
+        display: none;
     }
 }

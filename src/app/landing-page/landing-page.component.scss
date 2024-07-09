@@ -24,6 +24,7 @@
         img {
             position: absolute;
             width: 100%;
+            z-index: -1;
         }
     }
 }
@@ -209,7 +210,7 @@
 }
 
 
-@media (min-width: 320px) and (max-width: 431px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .backgroundImage {
         top: 30px;
     }
@@ -225,7 +226,7 @@
     }
 
     .landingPage {
-
+        padding-top: 100px;
         .rightSide {
             padding-right: 4px;
         }
@@ -255,16 +256,8 @@
 }
 
 
-// @media (min-width: 432px) and (max-width: 1120px) {
-//     .nameJob .name {
-//         font-size: calc(1.7rem + 1.5vw);
-//         margin-block-end: 12px;
-//     }
-//     .nameJob .job {
-//         font-size: calc(1rem + 1vw);
-//     }
-
-//     .iAm span {
-//         font-size: calc(1.25rem + 1.25vw);
-//     }
-// }
+@media (max-width: 650px) {
+    .scrollDown {
+        display: none;
+    }
+} 

@@ -113,7 +113,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 431px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .mySkills {
         bottom: 300px;
         flex-direction: column-reverse;
@@ -136,11 +136,23 @@
         gap: 20px;
         padding-right: 10px;
         padding-left: 10px;
+        >img {
+            max-width: 320px;
+        }
     }
 
     .d-none {
         display: block;
         position: absolute;
         bottom: -80px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+    .mySkills{
+        flex-direction: column-reverse;
+    }
+    .skillLogos {
+        justify-content: center;
     }
 }
