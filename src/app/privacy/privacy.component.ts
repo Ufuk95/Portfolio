@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './privacy.component.scss'
 })
 export class PrivacyComponent {
-
+  mail: string = "oezsahin95@icloud.com"
 }

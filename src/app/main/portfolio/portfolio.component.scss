@@ -38,8 +38,6 @@
 .project {
     @include dFlex($jc: center, $ai: center, $g: 100px);
     width: 100%;
-    // padding-left: 150px;
-    // padding-right: 80px;
     box-sizing: border-box;
 
     div {
