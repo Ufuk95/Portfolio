@@ -3,7 +3,7 @@
 .mySkills {
     @include dFlex($jc: space-between, $ai: center);
     position: relative;
-    bottom: 120px;
+    width: 100vw;
 }
 
 .skillLogos {
@@ -15,7 +15,7 @@
     box-sizing: border-box;
     width: 100%;
 
-    > img {
+    >img {
         position: absolute;
         left: 0;
         z-index: -1;
@@ -28,7 +28,7 @@
         flex-direction: column;
         margin: 10px;
 
-        > span {
+        >span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,9 +51,8 @@
     @include dFlex($jc: center, $ai: center);
     flex-direction: column;
     position: relative;
-    bottom: 100px;
 
-    > div {
+    >div {
         @include dFlex($jc: end, $ai: center, $g: 30px);
         width: 100%;
 
@@ -65,9 +64,11 @@
         }
     }
 
-    > span {
+    >span {
         font-weight: 400;
         font-size: 16px;
+        padding: 50px;
+        box-sizing: border-box;
     }
 
     button {
@@ -115,18 +116,20 @@
 
 @media (min-width: 320px) and (max-width: 500px) {
     .mySkills {
-        bottom: 300px;
         flex-direction: column-reverse;
+        padding-top: 40px;
+        box-sizing: border-box;
     }
 
-    .skillText > div h1 {
+    .skillText>div h1 {
         font-size: 44px;
     }
 
-    .skillText > span {
+    .skillText>span {
         padding-left: 8px;
         box-sizing: border-box;
     }
+
     .skillText button {
         display: none;
     }
@@ -136,6 +139,7 @@
         gap: 20px;
         padding-right: 10px;
         padding-left: 10px;
+
         >img {
             max-width: 320px;
         }
@@ -146,13 +150,53 @@
         position: absolute;
         bottom: -80px;
     }
+
+    .buttonDiv {
+        width: 100%;
+        @include dFlex($jc: center, $ai: center);
+    }
+
+    .skillText > div {
+        margin-top: 80px;
+    }
+
 }
 
-@media (min-width: 501px) and (max-width: 900px) {
-    .mySkills{
-        flex-direction: column-reverse;
+@media (min-width: 501px) and (max-width: 1150px) {
+    .skillText > div h1 {
+        font-size: 64px;
     }
+    .mySkills {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: end;
+        margin-top: 100px;
+        box-sizing: border-box;
+    }
+
     .skillLogos {
         justify-content: center;
+    }
+
+    .skillText button {
+        display: none;
+    }
+
+    .d-none {
+        display: block;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 710px) {
+    .skillLogos {
+        gap: 60px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 625px) {
+    .skillLogos {
+        gap: 18px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }

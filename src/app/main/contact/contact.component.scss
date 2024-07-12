@@ -1,8 +1,9 @@
 @import '../../app.component.scss';
 
 .fullContactArea {
-    margin-top: 150px;
-    margin-bottom: 100px;
+    width: 100vw;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
 
@@ -38,7 +39,7 @@
     img {
         position: absolute;
         left: 0;
-        margin-top: 1000px;
+        margin-top: 450px;
         z-index: -1;
     }
 }
@@ -177,7 +178,6 @@
         background-size: contain;
         width: 39px;
         height: 39px;
-        margin-top: 70px;
         box-sizing: border-box;
         position: relative;
 
@@ -234,7 +234,9 @@
 
 @media (min-width: 320px) and (max-width: 500px) {
     .fullContactArea {
-        margin-top: -70px;
+        padding-top: 60px;
+        box-sizing: border-box;
+        padding-bottom: 30px;
     }
 
     .contactHeadline h1 {
@@ -263,7 +265,7 @@
     }
 
     .contactText img {
-        margin-top: 1700px;
+        margin-top: 1500px;
         max-width: 320px;
     }
 
@@ -286,9 +288,12 @@
 }
 
 @media (min-width: 501px) and (max-width: 1100px) {
+    .contactHeadline h1 {
+        font-size: 64px;
+    }
     .contactText img {
-        margin-top: 1800px;
-        width: 50%;
+        margin-top: 1201px;
+        width: 62%;
 
     }
 
@@ -324,6 +329,11 @@
 
     .textContainer {
         width: 100%;
+    }
+    .contactText img {
+        width: 65%;
+        margin-top: 1400px;
+
     }
 }
 

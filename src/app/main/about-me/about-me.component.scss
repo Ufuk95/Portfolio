@@ -4,7 +4,8 @@
 .aboutMe {
     @include dFlex($jc: space-between, $ai: center);
     position: relative;
-    bottom: 350px;
+    width: 100vw;
+    height: 100vh;
 
     >img {
         position: absolute;
@@ -63,11 +64,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
-    .aboutMe {
-        bottom: 500px;
-    }
-
-    .aboutMeInfo >h1 {
+    .aboutMeInfo>h1 {
         font-size: 44px;
     }
 
@@ -78,10 +75,14 @@
     .aboutMeInfo {
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: auto;
     }
 }
 
 @media (min-width: 501px) and (max-width: 1300px) {
+    .aboutMeInfo > h1 {
+        font-size: 64px;
+    }
     .orangeLine {
         display: none;
     }
@@ -90,13 +91,21 @@
         padding-right: 12px;
         box-sizing: border-box;
     }
-    .aboutMeInfo{
+
+    .aboutMeInfo {
         padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
-@media (max-width: 885px) {
+@media (max-width: 1000px) {
     .ellipseFoto {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 389px) {
+    .aboutMeInfo div img {
         display: none;
     }
 }
