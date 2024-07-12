@@ -1,12 +1,11 @@
 @import '../../app.component.scss';
 
 .portfolio {
-    @include dFlex($jc: center, $ai: center, $g: 0px); // übergangslösung: muss verändert werden
+    @include dFlex($jc: center, $ai: center, $g: 0px);
     flex-direction: column;
     position: relative;
     width: 100vw;
-    // height: 100vh;
-    // top: 100px;
+    padding-top: 50px;
 }
 
 .headline {
@@ -34,10 +33,6 @@
         box-sizing: border-box;
     }
 }
-
-// .project-container {
-//     margin-top: 200px;
-// }
 
 .project {
     @include dFlex($jc: center, $ai: center, $g: 100px);

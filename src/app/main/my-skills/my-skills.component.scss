@@ -4,6 +4,7 @@
     @include dFlex($jc: space-between, $ai: center);
     position: relative;
     width: 100vw;
+    padding-top: 50px;
 }
 
 .skillLogos {
@@ -157,7 +158,7 @@
     }
 
     .skillText > div {
-        margin-top: 80px;
+        margin-top: 110px;
     }
 
 }
