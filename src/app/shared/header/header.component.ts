@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-header',
@@ -25,5 +26,11 @@ export class HeaderComponent {
     if (this.menuOpen && !targetElement.closest('.dropdown-menu') && !targetElement.closest('.burger-icon')) {
       this.menuOpen = false;
     }
+  }
+
+  constructor(private translationService: LanguageService) {}
+
+  switchLanguage(language: string) {
+    this.translationService.translatePage(language);
   }
 }

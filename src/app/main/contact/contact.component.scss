@@ -140,7 +140,7 @@
         }
 
         button {
-            max-width: 253px;
+            max-width: 263px;
             height: 58px;
             border-radius: 10px;
             padding: 15px 30px;
@@ -196,7 +196,7 @@
     position: relative;
 
     div {
-        @include dFlex($jc: center, $ai: flex-start, $g: 6px);
+        @include dFlex($jc: center, $ai: center, $g: 6px);
     }
 
     img {
@@ -271,6 +271,7 @@
         justify-content: center;
         width: 100%;
     }
+
     .textContainer div {
         width: 100%;
     }
@@ -278,12 +279,13 @@
     .inputContainer div {
         width: 100%;
     }
+
     .textContainer {
         width: 100%;
     }
 }
 
-@media (min-width: 501px) and (max-width: 1100px)  {
+@media (min-width: 501px) and (max-width: 1100px) {
     .contactText img {
         margin-top: 1800px;
         width: 50%;
@@ -300,6 +302,7 @@
 }
 
 @media (min-width: 501px) and (max-width: 650px) {
+
     .contactInput form input[type=text],
     .contactInput form [type=email],
     .contactInput form textarea {
@@ -310,6 +313,7 @@
         justify-content: center;
         width: 100%;
     }
+
     .textContainer div {
         width: 100%;
     }
@@ -317,7 +321,21 @@
     .inputContainer div {
         width: 100%;
     }
+
     .textContainer {
         width: 100%;
     }
+}
+
+.privacy {
+    padding-left: 3px;
+    padding-right: 3px;
+    box-sizing: border-box;
+    color: rgba(255, 71, 71, 1);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
 }
