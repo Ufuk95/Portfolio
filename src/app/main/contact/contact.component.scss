@@ -168,6 +168,19 @@
     }
 }
 
+.notification {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 122, 2, 0.651);
+    color: #16720b;
+    border-radius: 20px;
+    text-align: center;
+  }
+
 .arrowUpPosition {
     @include dFlex($jc: flex-end, $ai: center);
     width: 100%;

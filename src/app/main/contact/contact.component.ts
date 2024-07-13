@@ -18,6 +18,7 @@ export class ContactComponent {
   mailTest = true;
   http = inject(HttpClient);
   translation = inject(LanguageService);
+  showNotification: boolean = false;
 
   contactData = {
     name: '',
@@ -31,6 +32,7 @@ export class ContactComponent {
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
     this.checkboxTouched = true;
+
   }
 
   post = {
@@ -44,7 +46,7 @@ export class ContactComponent {
     },
   };
 
- onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm) {
     this.checkboxTouched = true;
 
     console.log('Form submitted');
@@ -63,11 +65,18 @@ export class ContactComponent {
           },
           complete: () => console.info('Send post complete'),
         });
+      this.showNotification = true;
+
+      setTimeout(() => {
+        this.showNotification = false;
+      }, 3000);
     } else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       ngForm.resetForm();
       this.isChecked = false;
       this.checkboxTouched = false;
     }
+
+
   }
 }
 

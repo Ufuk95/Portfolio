@@ -56,7 +56,7 @@
                   <div>
                     <img src="/img/contact/orangeCheckbox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': isChecked}">
                     <img class="d-none" src="/img/contact/orangeCheckedBox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': !isChecked}">
-                    <span data-translate-key="privacy">I've read the <a class="privacy" routerLink="/privacy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <span data-translate-key="privacy">I've read the <a class="privacy" routerLink="/privacy">privacy policy</a> and agree to the processing of my data as outlined.</span>
                   </div>
                   <div class="warnMessage">
                     <span *ngIf="!isChecked && checkboxTouched" data-translate-key="privacyWarn">Please agree to the privacy policy</span>
@@ -64,6 +64,9 @@
                 </div>
                 
                 <button type="submit" [ngClass]="{'valid': contactForm.form.valid && isChecked}" value="submit" data-translate-key="message">{{ buttonText }}</button>
+                <div *ngIf="showNotification" class="notification">
+                  Die Mail wurde erfolgreich gesendet.
+                </div>
               </form>
               
             <div class="arrowUpPosition">
