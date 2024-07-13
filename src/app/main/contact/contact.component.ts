@@ -69,7 +69,7 @@ export class ContactComponent {
 
       setTimeout(() => {
         this.showNotification = false;
-      }, 3000);
+      }, 2000);
     } else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       ngForm.resetForm();
       this.isChecked = false;
