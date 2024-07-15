@@ -36,7 +36,7 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'http://ufuk-oezsahin.de/sendMail.php', // wenn die eigene seite kurz davor ist fertig zu sein von http auf https ändern und die sendMail.php mit in fileZilla hochladen
+    endPoint: 'https://ufuk-oezsahin.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
