@@ -6,72 +6,97 @@
     <div class="contactDetails">
         <div class="contactText">
             <h3 data-translate-key="problem">Got a problem to solve?</h3>
-            <span data-translate-key="kontaktieren">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
+            <span data-translate-key="kontaktieren">Contact me through this form, I am interested in hearing from you,
+                knowing
+                your ideas and contributing
                 to your projects with my work.</span>
             <br>
-            <span data-translate-key="kontakt2">Need a Frontend developer? <span [ngStyle]="{'font-weight': '700'}">Contact me!</span></span>
-            <img src="/img/contact/redMistContact.png" alt="">
+            <span data-translate-key="kontakt2">Need a Frontend developer? <span
+                    [ngStyle]="{'font-weight': '700'}">Contact
+                    me!</span></span>
+            
         </div>
+        <img class="redMistContact" src="/img/contact/redMistContact.png" alt="">
         <div class="contactInput">
 
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="inputContainer">
-                  <div>
-                    <input data-translate-key="name" #name="ngModel" [(ngModel)]="contactData.name" name="name" placeholder="Your Name" type="text" required
-                      [ngClass]="{'invalid': !name.valid && name.touched, 'valid': name.valid && name.touched}">
-                    <img [class.d-none]="!name.touched || name.valid" src="/img/contact/error.png" alt="Error">
-                    <img [class.d-none]="!name.touched || !name.valid" src="/img/contact/correct.png" alt="Correct">
-                  </div>
-                  <div class="warnMessage">
-                    <span *ngIf="!name.valid && name.touched" data-translate-key="nameWarn">Please enter a valid name</span>
-                  </div>
+                    <div>
+                        <input data-translate-key="name" #name="ngModel" [(ngModel)]="contactData.name" name="name"
+                            placeholder="Your Name" type="text" required
+                            [ngClass]="{'invalid': !name.valid && name.touched, 'valid': name.valid && name.touched}">
+                        <img [class.d-none]="!name.touched || name.valid" src="/img/contact/error.png" alt="Error">
+                        <img [class.d-none]="!name.touched || !name.valid" src="/img/contact/correct.png" alt="Correct">
+                    </div>
+                    <div class="warnMessage">
+                        <span *ngIf="!name.valid && name.touched" data-translate-key="nameWarn">Please enter a valid
+                            name</span>
+                    </div>
                 </div>
-                
+
                 <div class="inputContainer">
-                  <div>
-                    <input data-translate-key="mail" #email="ngModel" [(ngModel)]="contactData.email" name="email" placeholder="Your email" type="email" required
-                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                      [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
-                    <img [class.d-none]="!email.touched || email.valid" src="/img/contact/error.png" alt="Error">
-                    <img [class.d-none]="!email.touched || !email.valid" src="/img/contact/correct.png" alt="Correct">
-                  </div>
-                  <div class="warnMessage">
-                    <span *ngIf="!email.valid && email.touched" data-translate-key="mailWarn">Please enter a valid email</span>
-                  </div>
+                    <div>
+                        <input data-translate-key="mail" #email="ngModel" [(ngModel)]="contactData.email" name="email"
+                            placeholder="Your email" type="email" required
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
+                        <img [class.d-none]="!email.touched || email.valid" src="/img/contact/error.png" alt="Error">
+                        <img [class.d-none]="!email.touched || !email.valid" src="/img/contact/correct.png"
+                            alt="Correct">
+                    </div>
+                    <div class="warnMessage">
+                        <span *ngIf="!email.valid && email.touched" data-translate-key="mailWarn">Please enter a valid
+                            email</span>
+                    </div>
                 </div>
-                
+
                 <div class="textContainer">
-                  <div>
-                    <textarea data-translate-key="text" #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15" required 
-                      [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
-                    <img [class.d-none]="!message.touched || message.valid" src="/img/contact/error.png" alt="Error">
-                    <img [class.d-none]="!message.touched || !message.valid" src="/img/contact/correct.png" alt="Correct">
-                  </div>
-                  <div class="warnMessage">
-                    <span *ngIf="!message.valid && message.touched" data-translate-key="textWarn">Please enter a valid message</span>
-                  </div>
+                    <div>
+                        <textarea data-translate-key="text" #message="ngModel" minlength="5"
+                            [(ngModel)]="contactData.message" name="message" placeholder="Your message" rows="15"
+                            required
+                            [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
+                        <img [class.d-none]="!message.touched || message.valid" src="/img/contact/error.png"
+                            alt="Error">
+                        <img [class.d-none]="!message.touched || !message.valid" src="/img/contact/correct.png"
+                            alt="Correct">
+                    </div>
+                    <div class="warnMessage">
+                        <span *ngIf="!message.valid && message.touched" data-translate-key="textWarn">Please enter a
+                            valid
+                            message</span>
+                    </div>
                 </div>
-                
+
                 <div class="checkBoxArea">
-                  <div>
-                    <img src="/img/contact/orangeCheckbox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': isChecked}">
-                    <img class="d-none" src="/img/contact/orangeCheckedBox.png" alt="" (click)="toggleCheckbox()" [ngClass]="{'d-none': !isChecked}">
-                    <span data-translate-key="privacy">I've read the <a class="privacy" routerLink="/privacy">privacy policy</a> and agree to the processing of my data as outlined.</span>
-                  </div>
-                  <div class="warnMessage">
-                    <span *ngIf="!isChecked && checkboxTouched" data-translate-key="privacyWarn">Please agree to the privacy policy</span>
-                  </div>
+                    <div>
+                        <img src="/img/contact/orangeCheckbox.png" alt="" (click)="toggleCheckbox()"
+                            [ngClass]="{'d-none': isChecked}">
+                        <img class="d-none" src="/img/contact/orangeCheckedBox.png" alt="" (click)="toggleCheckbox()"
+                            [ngClass]="{'d-none': !isChecked}">
+                        <span data-translate-key="privacy">I've read the <a class="privacy"
+                                routerLink="/privacy">privacy policy</a>
+                            and agree to the processing of my data as outlined.</span>
+                    </div>
+                    <div class="warnMessage">
+                        <span *ngIf="!isChecked && checkboxTouched" data-translate-key="privacyWarn">Please agree to the
+                            privacy
+                            policy</span>
+                    </div>
                 </div>
-                
-                <button type="submit" [ngClass]="{'valid': contactForm.form.valid && isChecked}" value="submit" data-translate-key="message">{{ buttonText }}</button>
+
+                <button type="submit" [ngClass]="{'valid': contactForm.form.valid && isChecked}" value="submit"
+                    data-translate-key="message">{{ buttonText }}</button>
                 <div *ngIf="showNotification" class="notification">
-                  Die Mail wurde erfolgreich gesendet.
+                    Die Mail wurde erfolgreich gesendet.
                 </div>
-              </form>
-              
+            </form>
+
             <div class="arrowUpPosition">
-              <a href="#startScreen"><div class="arrowUp">
-                </div></a>
+                <a href="#startScreen">
+                    <div class="arrowUp">
+                    </div>
+                </a>
             </div>
         </div>
     </div>

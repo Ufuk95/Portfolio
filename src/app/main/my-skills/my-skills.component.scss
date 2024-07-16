@@ -1,10 +1,14 @@
 @import '../../app.component.scss';
 
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .mySkills {
     @include dFlex($jc: space-between, $ai: center);
     position: relative;
-    width: 100vw;
-    padding-top: 50px;
+    width: 100%;
 }
 
 .skillLogos {
@@ -16,7 +20,7 @@
     box-sizing: border-box;
     width: 100%;
 
-    >img {
+    > img {
         position: absolute;
         left: 0;
         z-index: -1;
@@ -29,7 +33,7 @@
         flex-direction: column;
         margin: 10px;
 
-        >span {
+        > span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,7 +58,7 @@
     flex-direction: column;
     position: relative;
 
-    >div {
+    > div {
         @include dFlex($jc: end, $ai: center, $g: 30px);
         width: 100%;
 
@@ -66,7 +70,7 @@
         }
     }
 
-    >span {
+    > span {
         font-weight: 400;
         font-size: 16px;
         padding: 50px;
@@ -119,15 +123,17 @@
 @media (min-width: 320px) and (max-width: 500px) {
     .mySkills {
         flex-direction: column-reverse;
-        padding-top: 40px;
         box-sizing: border-box;
     }
+    .skillLogos >img {
+        filter: brightness(0.5);
+    }
 
-    .skillText>div h1 {
+    .skillText > div h1 {
         font-size: 44px;
     }
 
-    .skillText>span {
+    .skillText > span {
         padding-left: 8px;
         box-sizing: border-box;
     }
@@ -142,7 +148,7 @@
         padding-right: 10px;
         padding-left: 10px;
 
-        >img {
+        > img {
             max-width: 320px;
         }
     }
@@ -157,22 +163,17 @@
         width: 100%;
         @include dFlex($jc: center, $ai: center);
     }
-
-    .skillText > div {
-        margin-top: 110px;
-    }
-
 }
 
 @media (min-width: 501px) and (max-width: 1150px) {
     .skillText > div h1 {
         font-size: 64px;
     }
+
     .mySkills {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: end;
-        margin-top: 100px;
         box-sizing: border-box;
     }
 

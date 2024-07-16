@@ -1,6 +1,8 @@
 @import '../../app.component.scss';
 
 .fullContactArea {
+    max-width: 1920px;
+    margin: 0 auto;
     width: 100vw;
     padding-bottom: 40px;
     box-sizing: border-box;
@@ -18,6 +20,7 @@
 
 .contactDetails {
     @include dFlex($jc: space-between, $ai: baseline, $g: 150px);
+    position: relative;
     padding-left: 70px;
     padding-right: 70px;
     box-sizing: border-box;
@@ -35,13 +38,15 @@
         font-weight: 700;
         font-size: 32px;
     }
+}
 
-    img {
-        position: absolute;
-        left: 0;
-        margin-top: 450px;
-        z-index: -1;
-    }
+.redMistContact {
+    position: absolute;
+    width: 100%;
+    bottom: -60px;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.8);
 }
 
 .d-none {
@@ -251,7 +256,6 @@
     .fullContactArea {
         padding-top: 60px;
         box-sizing: border-box;
-        padding-bottom: 30px;
     }
 
     .contactHeadline h1 {
@@ -299,6 +303,12 @@
 
     .textContainer {
         width: 100%;
+    }
+
+    .redMistContact {
+        width: 100%;
+        bottom: -60px;
+        filter: brightness(0.5);
     }
 }
 

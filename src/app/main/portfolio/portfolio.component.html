@@ -1,70 +1,68 @@
-<div class="portfolio">
-    <div class="headline">
-        <div>
-            <img class="firstLine" src="/img/portfolio/smallRedLine.png" alt="">
-            <h1>Portfolio</h1>
-            <img class="secondLine" src="/img/portfolio/bigRedLine.png" alt="">
-        </div>
-        <span data-translate-key="port-txt">Explore a selection of my work here - Interact with projects to see my skills in action</span>
-    </div>
-
-
-    <div class="project-container">
-
-        <div class="project">
-            <img class="projectImage" [src]="projects[0].imgsrc" alt="{{ projects[0].name }}">
+<div class="portfolio-container">
+    <div class="portfolio">
+        <div class="headline">
             <div>
-                <span>{{ projects[0].name }}</span>
-                <p class="projectEnvironment">{{ projects[0].environment }}</p>
-                <p data-translate-key="join" class="projectText">{{ projects[0].text }}</p>
-                <div>
-                    <a href="http://join.ufuk-oezsahin.de/logIn.html" target="_blank"><button class="firstButton">Live test</button></a>
-                    <a href="https://github.com/Ufuk95/Join" target="_blank" rel="noopener noreferrer"><button class="secondButton">Github</button></a>
-                </div>
+                <img class="firstLine" src="/img/portfolio/smallRedLine.png" alt="">
+                <h1>Portfolio</h1>
+                <img class="secondLine" src="/img/portfolio/bigRedLine.png" alt="">
             </div>
+            <span data-translate-key="port-txt">Explore a selection of my work here - Interact with projects to see my skills in action</span>
         </div>
 
-        <div class="project reverse">
-            <div class="end">
-                <span>{{ projects[1].name }}</span>
-                <p class="projectEnvironment">{{ projects[1].environment }}</p>
-                <p data-translate-key="elp" class="projectText">{{ projects[1].text }}</p>
+        <div class="project-container">
+            <div class="project">
+                <img class="projectImage" [src]="projects[0].imgsrc" alt="{{ projects[0].name }}">
                 <div>
-                    <a href="http://loco.ufuk-oezsahin.de/" target="_blank"><button class="firstButton">Live test</button></a>
-                    <a href="https://github.com/Ufuk95/El-Pollo-Loco" target="_blank" rel="noopener noreferrer"><button class="secondButton">Github</button></a>
+                    <span>{{ projects[0].name }}</span>
+                    <p class="projectEnvironment">{{ projects[0].environment }}</p>
+                    <p data-translate-key="join" class="projectText">{{ projects[0].text }}</p>
+                    <div>
+                        <a href="http://join.ufuk-oezsahin.de/logIn.html" target="_blank"><button class="firstButton">Live test</button></a>
+                        <a href="https://github.com/Ufuk95/Join" target="_blank"><button class="secondButton">Github</button></a>
+                    </div>
                 </div>
             </div>
-            <img class="projectImage" [src]="projects[1].imgsrc" alt="{{ projects[1].name }}">
-        </div>
 
-        <div class="project">
-            <img class="redBackground" src="/img/portfolio/redMistPortfolio.png" alt="">
-            <img class="projectImage" [src]="projects[2].imgsrc" alt="{{ projects[2].name }}">
-            <div>
-                <span>{{ projects[2].name }}</span>
-                <p class="projectEnvironment">{{ projects[2].environment }}</p>
-                <p data-translate-key="simple" class="projectText">{{ projects[2].text }}</p>
+            <div class="project reverse">
+                <div class="end">
+                    <span>{{ projects[1].name }}</span>
+                    <p class="projectEnvironment">{{ projects[1].environment }}</p>
+                    <p data-translate-key="elp" class="projectText">{{ projects[1].text }}</p>
+                    <div>
+                        <a href="http://loco.ufuk-oezsahin.de/" target="_blank"><button class="firstButton">Live test</button></a>
+                        <a href="https://github.com/Ufuk95/El-Pollo-Loco" target="_blank" rel="noopener noreferrer"><button class="secondButton">Github</button></a>
+                    </div>
+                </div>
+                <img class="projectImage" [src]="projects[1].imgsrc" alt="{{ projects[1].name }}">
+            </div>
+
+            <div class="project">
+                <img class="redBackground" src="/img/portfolio/redMistPortfolio.png" alt="">
+                <img class="projectImage" [src]="projects[2].imgsrc" alt="{{ projects[2].name }}">
                 <div>
-                    <button class="firstButton">Live test</button>
-                    <button class="secondButton">Github</button>
+                    <span>{{ projects[2].name }}</span>
+                    <p class="projectEnvironment">{{ projects[2].environment }}</p>
+                    <p data-translate-key="simple" class="projectText">{{ projects[2].text }}</p>
+                    <div>
+                        <button class="firstButton">Live test</button>
+                        <button class="secondButton">Github</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project reverse">
-            <div class="end">
-                <span>{{ projects[3].name }}</span>
-                <p class="projectEnvironment">{{ projects[3].environment }}</p>
-                <p data-translate-key="pokedex" class="projectText">{{ projects[3].text }}</p>
-                <div>
-                    <a href="http://pokemon.ufuk-oezsahin.de/" target="_blank"><button class="firstButton">Live test</button></a>
-                    <a href="https://github.com/Ufuk95/Pokedex" target="_blank"><button class="secondButton">Github</button></a>
+            <div class="project reverse">
+                <div class="end">
+                    <span>{{ projects[3].name }}</span>
+                    <p class="projectEnvironment">{{ projects[3].environment }}</p>
+                    <p data-translate-key="pokedex" class="projectText">{{ projects[3].text }}</p>
+                    <div>
+                        <a href="http://pokemon.ufuk-oezsahin.de/" target="_blank"><button class="firstButton">Live test</button></a>
+                        <a href="https://github.com/Ufuk95/Pokedex" target="_blank"><button class="secondButton">Github</button></a>
+                    </div>
                 </div>
+                <img class="projectImage" [src]="projects[3].imgsrc" alt="{{ projects[3].name }}">
+                <img class="orangeBackground" src="/img/portfolio/orangeMistPortfolio.png" alt="">
             </div>
-            <img class="projectImage" [src]="projects[3].imgsrc" alt="{{ projects[3].name }}">
-            <img class="orangeBackground" src="/img/portfolio/orangeMistPortfolio.png" alt="">
         </div>
-
     </div>
-
 </div>
