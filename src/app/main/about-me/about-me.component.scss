@@ -17,6 +17,7 @@
         right: 0;
         bottom: 40px;
         z-index: -1;
+        filter: brightness(0.5);
     }
 }
 
@@ -81,7 +82,7 @@
         padding-left: 10px;
         padding-right: 10px;
         position: relative;
-        bottom: 100px;
+        bottom: 80px;
 
         div {
             padding-left: 0;

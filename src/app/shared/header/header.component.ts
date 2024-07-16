@@ -15,10 +15,20 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    this.updateBodyScroll();
   }
 
   closeMenu() {
     this.menuOpen = false;
+    this.updateBodyScroll();
+  }
+
+  private updateBodyScroll() {
+    if (this.menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 
   @HostListener('document:click', ['$event'])
@@ -26,6 +36,7 @@ export class HeaderComponent {
     const targetElement = event.target as HTMLElement;
     if (this.menuOpen && !targetElement.closest('.dropdown-menu') && !targetElement.closest('.burger-icon')) {
       this.menuOpen = false;
+      this.updateBodyScroll();
     }
   }
 

@@ -41,12 +41,12 @@
 }
 
 .redMistContact {
-    position: absolute;
-    width: 100%;
     bottom: -60px;
+    width: 50%;
+    position: absolute;
     left: 0;
     z-index: -1;
-    filter: brightness(0.8);
+    filter: brightness(0.5);
 }
 
 .d-none {
