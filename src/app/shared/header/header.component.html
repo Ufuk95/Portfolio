@@ -8,7 +8,10 @@
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
         <div>
-            <button (click)="switchLanguage('de')">de</button> | <button (click)="switchLanguage('en')">en</button>
+            <button [class.active]="currentLanguage === 'de'" (click)="switchLanguage('de')">de</button> |
+            <button [class.active]="currentLanguage === 'en'" (click)="switchLanguage('en')">en</button>
+
+
         </div>
     </div>
 
@@ -22,5 +25,5 @@
         <div>
             <button (click)="switchLanguage('de')">de</button> | <button (click)="switchLanguage('en')">en</button>
         </div>
-    </div>    
+    </div>
 </div>

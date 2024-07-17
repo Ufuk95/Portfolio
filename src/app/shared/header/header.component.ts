@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
 import { RouterModule } from '@angular/router';
@@ -8,10 +8,17 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss'] // Fix the styleUrls property
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   menuOpen = false;
+  currentLanguage!: string;
+
+  constructor(private translationService: LanguageService) {}
+
+  ngOnInit() {
+    this.currentLanguage = this.translationService.getLanguage();
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -40,9 +47,8 @@ export class HeaderComponent {
     }
   }
 
-  constructor(private translationService: LanguageService) {}
-
   switchLanguage(language: string) {
+    this.currentLanguage = language;  // Set the current language
     this.translationService.translatePage(language);
   }
 }

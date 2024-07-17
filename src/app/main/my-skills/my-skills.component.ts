@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -22,4 +23,11 @@ export class MySkillsComponent {
     { src: '/img/skills/scrum.png', name: 'Scrum' },
     { src: '/img/skills/material.png', name: 'Material design' }
   ];
+
+  constructor(private translationService: LanguageService) {}
+
+  ngOnInit() {
+    const currentLanguage = this.translationService.getLanguage();
+    this.translationService.translatePage(currentLanguage);
+  }
 }

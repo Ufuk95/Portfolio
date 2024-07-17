@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../language.service';
 
 
 @Component({
@@ -11,4 +12,11 @@ import { Component } from '@angular/core';
 })
 export class LandingPageComponent {
   email: string = 'oezsahin95@icloud.com';
+
+  constructor(private translationService: LanguageService) {}
+
+  ngOnInit() {
+    const currentLanguage = this.translationService.getLanguage();
+    this.translationService.translatePage(currentLanguage);
+  }
 }

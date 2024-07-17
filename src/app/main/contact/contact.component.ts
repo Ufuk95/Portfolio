@@ -78,5 +78,12 @@ export class ContactComponent {
 
 
   }
+
+  constructor(private translationService: LanguageService) {}
+
+  ngOnInit() {
+    const currentLanguage = this.translationService.getLanguage();
+    this.translationService.translatePage(currentLanguage);
+  }
 }
 

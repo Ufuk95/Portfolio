@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LanguageService {
+
   open: boolean = false;
   langMode = "en";
   isGerman = false;
@@ -109,10 +110,10 @@ export class LanguageService {
       'de': `Bitte geben Sie eine gültige Nachricht ein`
     },
     'privacy': {
-      'en': `I've read the <a href="privacy" target="_blank" style="color: rgba(255, 71, 71, 1); text-decoration: none; background-color: transparent;"
+      'en': `I've read the <a href="privacy" style="color: rgba(255, 71, 71, 1); text-decoration: none; background-color: transparent;"
           onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';">privacy policy</a> and agree to the processing of my data as outlined.`,
-      'de': `Ich habe die <a href="privacy" target="_blank" style="color: rgba(255, 71, 71, 1); text-decoration: none; background-color: transparent;"
+      'de': `Ich habe die <a href="privacy" style="color: rgba(255, 71, 71, 1); text-decoration: none; background-color: transparent;"
           onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.`
     },
@@ -703,10 +704,16 @@ export class LanguageService {
     const elements = document.querySelectorAll('[data-translate-key]');
     elements.forEach(element => this.translateElement(element as HTMLElement, lang));
     this.langMode = lang;
-    this.isGerman = lang === "de";
+    if(lang == "de"){
+      this.isGerman = true;
+    }
+    else{
+      this.isGerman = false;
+    }
   }
 
-  constructor() { }
-
+  getLanguage(): string {
+    return this.langMode;
+  }
 
 }

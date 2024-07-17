@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,5 +17,10 @@ export class PortfolioComponent {
     { imgsrc: '/img/portfolio/SimpleCRM.png', name: 'Simple CRM', environment: 'Angular | Firebase', text: 'A very Simple Customer Relationship Management system working with CRUD functionality.'},
     { imgsrc: '/img/portfolio/Pokedex.png', name: 'Pokédex', environment: 'JavaScript | HTML | CSS | Api', text: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'}
   ]
+  constructor(private translationService: LanguageService) {}
 
+  ngOnInit() {
+    const currentLanguage = this.translationService.getLanguage();
+    this.translationService.translatePage(currentLanguage);
+  }
 }
