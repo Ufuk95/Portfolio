@@ -1,12 +1,14 @@
 html {
     background-color: rgba(20, 29, 47, 1);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
+    overflow-x: hidden;
 }
 
 @font-face {

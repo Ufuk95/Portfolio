@@ -10,9 +10,11 @@
     @include dFlex($jc: space-between, $ai: flex-start);
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    // margin-top: 200px;
+    // box-sizing: border-box;
 
-    > img {
+    >img {
         position: absolute;
         right: 0;
         bottom: 40px;
@@ -26,7 +28,7 @@
     padding-right: 100px;
     box-sizing: border-box;
 
-    > h1 {
+    >h1 {
         font-weight: 700;
         font-size: 90px;
         margin-block-start: 0px;
@@ -70,7 +72,7 @@
         height: auto;
     }
 
-    .aboutMeInfo > h1 {
+    .aboutMeInfo>h1 {
         font-size: 44px;
     }
 
@@ -93,15 +95,16 @@
         }
     }
 
-    .aboutMe > img {
+    .aboutMe>img {
         filter: brightness(0.5);
     }
 }
 
-@media (min-width: 501px) and (max-width: 1300px) {
-    .aboutMeInfo > h1 {
+@media (min-width: 501px) and (max-width: 1440px) {
+    .aboutMeInfo>h1 {
         font-size: 64px;
     }
+
     .orangeLine {
         display: none;
     }
@@ -123,15 +126,11 @@
     }
 }
 
-// @media (min-width: 320px) and (max-width: 389px) {
-//     .aboutMeInfo div img {
-//         display: none;
-//     }
-// }
-
 @media (min-width: 1920px) {
     .aboutMe {
-        height: auto;
+        height: 55vh;
+        margin-top: 200px;
+        box-sizing: border-box;
     }
 }
 
