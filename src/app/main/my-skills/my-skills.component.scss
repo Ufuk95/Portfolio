@@ -208,5 +208,10 @@
 @media (min-width: 1920px) {
     .mySkills {
         height: 45vh;
+        position: unset;
+    }
+    .skillLogos >img {
+        bottom: auto !important;
+
     }
 }

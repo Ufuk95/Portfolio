@@ -389,3 +389,13 @@
     }
 
 }
+
+@media (min-width: 1920px) {
+    .contactDetails {
+        position: unset;
+    }
+    .redMistContact {
+        width: unset;
+        bottom: unset;
+    }
+}

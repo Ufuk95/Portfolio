@@ -128,9 +128,14 @@
 
 @media (min-width: 1920px) {
     .aboutMe {
+        position: unset;
         height: 55vh;
         margin-top: 200px;
         box-sizing: border-box;
+
+        >img {
+            bottom: -450px;
+        }
     }
 }
 

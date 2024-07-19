@@ -93,9 +93,8 @@
 
 .backgroundImage {
     position: absolute;
-    top: 90px;
+    top: 110px;
     left: 0;
-    max-width: 1920px;
     width: 100vw;
     height: 100vh;
     background-image: url(/img/Vector.png);
@@ -196,9 +195,6 @@
 @media (min-width: 320px) and (max-width: 500px) {
     .iAm span {
         font-size: 32px;
-    }
-    .backgroundImage {
-        top: 30px;
     }
 
     .nameJob {
