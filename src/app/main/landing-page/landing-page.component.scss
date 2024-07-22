@@ -17,7 +17,7 @@
     margin-top: 75px !important;
     margin: auto auto;
     box-sizing: border-box;
-    height: 100vh;
+    height: calc(100vh - 75px);
 }
 
 .landingComponent {
@@ -73,23 +73,28 @@
         @include responsive-font-size(48px, 1263.33px);
     }
 
-    button {
-        background-color: rgba(250, 121, 2, 1);
-        width: 164px;
-        height: 58px;
-        border: none;
-        border-radius: 10px;
-        font-weight: 400;
-        font-size: 23px;
-        color: white;
-        transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
-
-        &:hover {
-            background-color: rgba(255, 71, 71, 1);
-            transform: scale(1.1) translateY(3px);
-            cursor: pointer;
+    a {
+        text-decoration: none;
+        
+        button {
+            background-color: rgba(250, 121, 2, 1);
+            width: 164px;
+            height: 58px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 23px;
+            color: white;
+            transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+    
+            &:hover {
+                background-color: rgba(255, 71, 71, 1);
+                transform: scale(1.1) translateY(3px);
+                cursor: pointer;
+            }
         }
     }
+    
 }
 
 .iAm {
@@ -170,6 +175,7 @@
         .leftSide {
 
             padding-top: 200px;
+
             img {
                 max-width: 481.09px;
                 max-height: 476.3px;
@@ -233,6 +239,7 @@
             padding-top: 160px;
             width: 100%;
         }
+
         .rightSide {
             padding-right: 4px;
             top: unset;
@@ -289,12 +296,14 @@
     .socialMedia {
         top: 85vh;
         position: absolute;
+        max-width: 1920px;
         width: 100%;
 
         .socialMediaLogo {
             position: relative;
         }
     }
+
     .landingPage {
         position: relative;
     }
@@ -305,11 +314,12 @@
         top: 50vh;
         left: 20%;
     }
+
     .landingPage .leftSide {
         top: 10vh;
 
         img {
-            width: 50%;
+            width: 45%;
         }
     }
 
@@ -325,8 +335,15 @@
         .job {
             @include min-responsive-font-size(70px, 1920px)
         }
+
+        a {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
-    
+
     .iAm span {
         width: 168px;
         @include min-responsive-font-size(75px, 1920px)
@@ -378,11 +395,13 @@
         font-size: 50px;
         width: max-content;
     }
+
     .landingPage .rightSide {
         top: 0;
         margin-bottom: 32px;
     }
-    .socialMedia{
+
+    .socialMedia {
         top: 32px;
     }
 }

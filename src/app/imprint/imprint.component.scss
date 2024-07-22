@@ -1,21 +1,42 @@
-div {
-    padding-top: 50px;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
+.font-size-sm {
+  font-size: 1em;
+}
 
-    h1, h2, h3 {
-        color: rgba(255, 71, 71, 1);
+.font-size-md {
+  font-size: 1.25em;
+}
+
+.font-size-lg {
+  font-size: 1.5em;
+}
+
+.font-size-xl {
+  font-size: 2em;
+}
+
+div[data-translate-key="imprintContent"] {
+  padding-top: 70px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+
+  h1,
+  h2,
+  h3 {
+    color: rgba(255, 71, 71, 1);
+  }
+
+  p {
+    a {
+      color: rgba(250, 121, 2, 1);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
-
-    p {
-        a {
-            color: rgba(250, 121, 2, 1);
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }

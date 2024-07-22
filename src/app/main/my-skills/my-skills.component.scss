@@ -7,15 +7,9 @@
 
 .mySkills {
     @include dFlex($jc: space-between, $ai: center);
-    position: relative;
+    //position: relative;
     width: 100%;
-    opacity: 0; 
-    transform: translateY(-20px); 
-    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out; 
-    &.visible {
-        opacity: 1;
-        transform: translateY(0); 
-    }
+
 }
 
 .skillLogos {
@@ -27,12 +21,13 @@
     box-sizing: border-box;
     width: 100%;
 
-    > img {
+    >img {
         filter: brightness(0.5);
         position: absolute;
         left: 0;
         z-index: -1;
-        bottom: -600px;
+        bottom: auto;
+
     }
 
     .skill-container {
@@ -40,8 +35,16 @@
         @include dFlex($jc: center, $ai: center, $g: 8px);
         flex-direction: column;
         margin: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
 
-        > span {
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        >span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,8 +68,16 @@
     @include dFlex($jc: center, $ai: center);
     flex-direction: column;
     position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
 
-    > div {
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    >div {
         @include dFlex($jc: end, $ai: center, $g: 30px);
         width: 100%;
 
@@ -78,7 +89,7 @@
         }
     }
 
-    > span {
+    >span {
         font-weight: 400;
         font-size: 16px;
         padding: 50px;
@@ -133,15 +144,16 @@
         flex-direction: column-reverse;
         box-sizing: border-box;
     }
-    .skillLogos >img {
+
+    .skillLogos>img {
         filter: brightness(0.5);
     }
 
-    .skillText > div h1 {
+    .skillText>div h1 {
         font-size: 44px;
     }
 
-    .skillText > span {
+    .skillText>span {
         padding-left: 8px;
         box-sizing: border-box;
     }
@@ -156,7 +168,7 @@
         padding-right: 10px;
         padding-left: 10px;
 
-        > img {
+        >img {
             max-width: 320px;
         }
     }
@@ -170,11 +182,19 @@
     .buttonDiv {
         width: 100%;
         @include dFlex($jc: center, $ai: center);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
 @media (min-width: 501px) and (max-width: 1150px) {
-    .skillText > div h1 {
+    .skillText>div h1 {
         font-size: 64px;
     }
 
@@ -217,9 +237,10 @@
         position: unset;
         margin-top: 100px;
         margin-bottom: 100px;
-    
+
     }
-    .skillLogos >img {
+
+    .skillLogos>img {
         bottom: auto !important;
 
     }

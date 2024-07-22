@@ -1,26 +1,26 @@
 <div class="container">
-    <div class="mySkills" appVisibleOnScroll>
+    <div class="mySkills" >
         <div class="skillLogos">
-          <img src="/img/skills/orangeDust.png" alt="">
-          <div *ngFor="let image of skillImages" class="skill-container">
-            <img [src]="image.src" alt="web skill logos">
-            <span>{{ image.name }}</span>
-          </div>
-      
-          <div class="buttonDiv">
-            <a class="d-none" href="#contact"><button class="responsiveButton">Get in touch</button></a>
-          </div>
+            <img src="/img/skills/orangeDust.png" alt="">
+            <div appVisibleOnScroll *ngFor="let image of skillImages" class="skill-container">
+                <img [src]="image.src" alt="web skill logos">
+                <span>{{ image.name }}</span>
+            </div>
+
+            <div class="buttonDiv" appVisibleOnScroll>
+                <a class="d-none" href="#contact"><button class="responsiveButton">Get in touch</button></a>
+            </div>
         </div>
-      
-        <div class="skillText">
-          <div>
-            <h1>My skills</h1>
-            <img src="/img/skills/redSkillLine.png" alt="">
-          </div>
-          <span data-translate-key="skill-txt">
-            I have grown my frontend developments skills that have allowed me to create different real projects.
-          </span>
-          <a href="#contact"><button data-translate-key="kont">Get in touch</button></a>
+
+        <div class="skillText" appVisibleOnScroll>
+            <div>
+                <h1>My skills</h1>
+                <img src="/img/skills/redSkillLine.png" alt="">
+            </div>
+            <span data-translate-key="skill-txt">
+                I have grown my frontend developments skills that have allowed me to create different real projects.
+            </span>
+            <a href="#contact"><button data-translate-key="kont">Get in touch</button></a>
         </div>
-      </div>
+    </div>
 </div>
