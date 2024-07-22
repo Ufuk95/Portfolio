@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../language.service';
 import { RouterLink } from '@angular/router';
+import { VisibleOnScrollDirective } from '../../visible-on-scroll.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule, RouterLink, VisibleOnScrollDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

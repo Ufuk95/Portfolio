@@ -2,6 +2,7 @@
 
 .header {
     width: 100vw;
+    max-width: 1920px;
     @include dFlex($jc: space-between, $ai: center);
     height: 75px;
     box-sizing: border-box;

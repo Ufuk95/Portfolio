@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../../language.service';
+import { VisibleOnScrollDirective } from '../../visible-on-scroll.directive';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, VisibleOnScrollDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
