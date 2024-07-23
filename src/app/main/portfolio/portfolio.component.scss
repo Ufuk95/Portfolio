@@ -13,14 +13,14 @@
 }
 
 .headline {
-    @include dFlex($jc: center, $ai: center, $g: 0px);
+    @include dFlex($jc: center, $ai: end, $g: 0px);
     flex-direction: column;
     width: 100%;
     position: relative;
 
     div {
         @include dFlex($jc: center, $ai: center, $g: 50px);
-        position: absolute;
+        // position: absolute;
         right: 0;
 
         h1 {
@@ -30,10 +30,12 @@
     }
 
     span {
-        position: relative;
-        top: 100px;
-        padding: 80px;
+        padding-bottom: 80px;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
 
@@ -86,6 +88,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -130,6 +133,13 @@
     @include dFlex($jc: center, $ai: end);
     flex-direction: column;
     text-align: end;
+}
+
+.div-strich {
+    height: 5px;
+    min-width: 470px;
+    background-color: rgb(254, 70, 70);
+    border-radius: 4px;
 }
 
 @media (min-width: 320px) and (max-width: 500px) {

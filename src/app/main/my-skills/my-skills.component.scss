@@ -139,6 +139,15 @@
     }
 }
 
+
+.div-strich {
+    height: 5px;
+    min-width: 60px;
+    background-color: rgb(254, 70, 70);
+    border-radius: 4px;
+}
+
+
 @media (min-width: 320px) and (max-width: 500px) {
     .mySkills {
         flex-direction: column-reverse;

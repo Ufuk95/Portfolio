@@ -1,11 +1,12 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { LanguageService } from '../language.service';
 import { CommonModule } from '@angular/common';
+import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterLink, CommonModule],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
@@ -14,13 +15,25 @@ export class ImprintComponent implements OnInit {
   fontSizeClass!: string;
 
 
-  constructor(private translationService: LanguageService) {
+  constructor(private translationService: LanguageService, private router: Router) {
     this.updateFontSizeClass(window.innerWidth);
   }
 
   ngOnInit() {
     const currentLanguage = this.translationService.getLanguage();
     this.translationService.translatePage(currentLanguage);
+
+    this.scrollToTop();
+
+    // Abonniere Router-Events, um bei Navigation-Ende zur Imprint-Seite zu scrollen
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd && this.router.url === '/imprint') {
+        this.scrollToTop();
+      }
+    });
+  }
+  private scrollToTop(): void {
+    window.scrollTo(0, 0);
   }
 
   @HostListener('window:resize', ['$event'])

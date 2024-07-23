@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'] // Fix the styleUrls property
+  styleUrls: ['./header.component.scss'] 
 })
 export class HeaderComponent implements OnInit {
   menuOpen = false;
@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   }
 
   switchLanguage(language: string) {
-    this.currentLanguage = language;  // Set the current language
+    this.currentLanguage = language;
     this.translationService.translatePage(language);
   }
 }

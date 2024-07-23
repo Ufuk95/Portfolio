@@ -8,7 +8,7 @@ footer {
     border-top: 4px solid rgba(250, 121, 2, 1);
     width: 100vw;
     height: 200px;
-    max-width: 1920px;
+    // max-width: 1920px;
 
 
     .leftSide {
@@ -120,9 +120,9 @@ footer {
     }
 }
 
-@media (min-width: 1920px) {
-    footer {
-        border-left: 4px solid rgba(250, 121, 2, 1);
-        border-right: 4px solid rgba(250, 121, 2, 1);
-    }
-}
+// @media (min-width: 1920px) {
+//     footer {
+//         border-left: 4px solid rgba(250, 121, 2, 1);
+//         border-right: 4px solid rgba(250, 121, 2, 1);
+//     }
+// }
