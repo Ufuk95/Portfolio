@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent implements OnInit {
-  mail: string = "oezsahin95@icloud.com";
+  mail: string = "info@ufuk-oezsahin.de";
   fontSizeClass!: string;
 
   constructor(private translationService: LanguageService) {

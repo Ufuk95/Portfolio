@@ -11,7 +11,7 @@ import { LanguageService } from '../../language.service';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-  email: string = 'oezsahin95@icloud.com';
+  email: string = 'info@ufuk-oezsahin.de';
 
   constructor(private translationService: LanguageService) {}
 

@@ -150,7 +150,7 @@ export class LanguageService {
           Phone: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="tel:+4915236253545">+4915236253545</a><br>
           Email: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
-          onmouseout="this.style.textDecoration='none';" href="mailto:oezsahin95@icloud.com">oezsahin95@icloud.com</a><br>
+          onmouseout="this.style.textDecoration='none';" href="mailto:info@ufuk-oezsahin.de">info@ufuk-oezsahin.de</a><br>
           Web: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="http://ufuk-oezsahin.de">ufuk-oezsahin.de</a>
         </p>
@@ -207,7 +207,7 @@ export class LanguageService {
           Telefon: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="tel:+4915236253545">+4915236253545</a><br>
           E-Mail: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
-          onmouseout="this.style.textDecoration='none';" href="mailto:oezsahin95@icloud.com">oezsahin95@icloud.com</a><br>
+          onmouseout="this.style.textDecoration='none';" href="mailto:info@ufuk-oezsahin.de">info@ufuk-oezsahin.de</a><br>
           Web: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="http://ufuk-oezsahin.de">ufuk-oezsahin.de</a>
         </p>
@@ -323,7 +323,7 @@ export class LanguageService {
             Phone: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="tel:+4915236253545">+4915236253545</a><br>
             Email: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
-          onmouseout="this.style.textDecoration='none';" href="mailto:oezsahin95@icloud.com">oezsahin95@icloud.com</a>
+          onmouseout="this.style.textDecoration='none';" href="mailto:info@ufuk-oezsahin.de">info@ufuk-oezsahin.de</a>
           </p>
           <p>
             The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and
@@ -538,7 +538,7 @@ export class LanguageService {
             Telefon: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
           onmouseout="this.style.textDecoration='none';" href="tel:+4915236253545">+4915236253545</a><br>
             E-Mail: <a style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
-          onmouseout="this.style.textDecoration='none';" href="mailto:oezsahin95@icloud.com">oezsahin95@icloud.com</a>
+          onmouseout="this.style.textDecoration='none';" href="mailto:info@ufuk-oezsahin.de">info@ufuk-oezsahin.de</a>
           </p>
           <p>
             Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
