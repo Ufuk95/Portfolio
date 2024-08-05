@@ -164,6 +164,8 @@ export class LanguageService {
         </p>
 
         <h2 style="color: rgba(255, 71, 71, 1)">Disclaimer:</h2>
+        <p>Pictures of myself were taken at the photo studio in Kösching: <a  style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
+          onmouseout="this.style.textDecoration='none';" href="https://www.fotostudiok.de/" target="_blank">Fotostudio Kösching</a></p>
 
         <h3 style="color: rgba(255, 71, 71, 1)">Liability for contents</h3>
         <p>
@@ -221,6 +223,9 @@ export class LanguageService {
         </p>
 
         <h2 style="color: rgba(255, 71, 71, 1)">Haftungsausschluss (Disclaimer):</h2>
+        <p>Bilder von mir wurden im Fotostudio in Kösching aufgenommen: <a  style="color: rgba(250, 121, 2, 1); text-decoration: none; background-color: transparent;" onmouseover="this.style.textDecoration='underline';" 
+          onmouseout="this.style.textDecoration='none';" href="https://www.fotostudiok.de/" target="_blank">Fotostudio Kösching</a></p>
+
 
         <h3 style="color: rgba(255, 71, 71, 1)">Haftung für Inhalte</h3>
         <p>
