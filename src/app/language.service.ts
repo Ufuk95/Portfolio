@@ -35,8 +35,8 @@ export class LanguageService {
       'de': 'Eines der Dinge, die ich an der Arbeit als Frontend-Entwickler am meisten liebe, ist die Freiheit, meine eigenen Ideen zu verwirklichen, begrenzt nur durch meine Vorstellungskraft. Ich kann diese Ideen durch Code in die Realität umsetzen und erhalte sofort visuelles Feedback zu meiner Arbeit und dem Wert, den ich geschaffen habe.'
     },
     'point2': {
-      'en': "For me, time flies when I'm coding, and every problem I solve feels like fitting a puzzle piece into its perfect spot. The satisfaction is greatest when the problem has been particularly challenging to overcome.",
-      'de': 'Für mich vergeht die Zeit wie im Flug, wenn ich code, und jedes gelöste Problem fühlt sich an, als würde ein Puzzleteil seinen richtigen Platz finden. Die Befriedigung ist am größten, wenn das Problem besonders knifflig war.'
+      'en': "For me, time flies when I'm coding, and every problem I solve feels like fitting a puzzle piece into its perfect spot. The sense of achievement is greatest when the problem has been particularly challenging to overcome.",
+      'de': 'Für mich vergeht die Zeit wie im Flug, wenn ich code, und jedes gelöste Problem fühlt sich an, als würde ein Puzzleteil seinen richtigen Platz finden. Das Erfolgserlebnis ist am größten, wenn das Problem besonders knifflig war.'
     },
     'skill-txt': {
       'en': 'I have grown my frontend developments skills that have allowed me to create different real projects.',
